@@ -6,13 +6,16 @@ const logo = '/pelada-na-net.png';
 	<img src={logo} />
 </div>
 <style>
-	div {
-		background-color: var(--azul-medio);
-		line-height: 0;
-	}
-
 	.logo {
+		background-image: url(bg-logo.png);
+		background-position: center;
+		background-size: cover;
+		background-color: var(--azul-fundo-logo);
+		line-height: 0;
 		text-align: center;
-		margin: 1em auto 2em;
+	}
+	
+	img {
+		margin: 3em auto;
 	}
 </style>

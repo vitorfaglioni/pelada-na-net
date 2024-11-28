@@ -11,6 +11,7 @@
 	--azul-claro: #30affa;
 	--azul-medio: #1e76b9;
 	--azul-escuro: #163245;
+	--azul-fundo-logo: #67e2fa;
 	--amarelo: #fcc000;
 	--amarelo-escuro: #ff9945;
 	--ciano: #32ffff;
@@ -21,7 +22,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: var(--azul-medio);
+	background: var(--azul-fundo-logo);
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
