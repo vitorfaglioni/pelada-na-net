@@ -1,9 +1,10 @@
 ---
-const { name, amount, description, isReward } = Astro.props;
+const { name, amount, description, isReward, oldAmount } = Astro.props;
 ---
 <h4>{name}!</h4>
 {isReward && <p><strong>A partir de:</strong></p>}
 <h1>R$ {amount},00</h1>
+{ oldAmount != amount && <strike><h5>R$ {oldAmount},00</h5></strike> }
 <p>{description}</p>
 
 <p><br/></p>
@@ -19,6 +20,16 @@ const { name, amount, description, isReward } = Astro.props;
 		margin: auto;
 	}
     
+	h5 {
+		text-align: center;
+		color: var(--ciano);
+        filter: drop-shadow(0px 6px 0px var(--azul-escuro)) 
+			drop-shadow(0px -1px 0px var(--azul-escuro))
+			drop-shadow(1px 0px 0px var(--azul-escuro))
+			drop-shadow(-1px 0px 0px var(--azul-escuro));
+		margin: auto;
+	}
+
     h4 {
 		color: var(--azul-escuro);
 	}
