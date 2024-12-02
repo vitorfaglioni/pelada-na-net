@@ -1,0 +1,63 @@
+<div id="Store">
+	<main>
+		<h2>Temos produtos disponíveis na Podcast Store!</h2>
+
+		<div class="product-gallery">
+			<div class="product-image">
+				<a href="https://podcaststore.com.br/" target="_blank"><img src="store/store-1.jpg"/></a>
+			</div>
+			<div class="product-image">
+				<a href="https://podcaststore.com.br/" target="_blank"><img src="store/store-2.jpg"/></a>
+			</div>
+			<div class="product-image">
+				<a href="https://podcaststore.com.br/" target="_blank"><img src="store/store-3.jpg"/></a>
+			</div>
+			<div class="product-image">
+				<a href="https://podcaststore.com.br/" target="_blank"><img src="store/store-4.jpg"/></a>
+			</div>
+			<div class="product-image">
+				<a href="https://podcaststore.com.br/" target="_blank"><img src="store/store-5.jpg"/></a>
+			</div>
+			<div class="product-image">
+				<a href="https://podcaststore.com.br/" target="_blank"><img src="store/store-6.jpg"/></a>
+			</div>
+		</div>
+
+		<h3>Compre em <a href="https://podcaststore.com.br/" target="_blank">podcaststore.com.br</a></h3>
+	</main>
+</div>
+<style>
+	div {
+		color: var(--amarelo);
+		background-color: var(--azul-escuro);
+	}
+
+	h2 {
+		text-align: center;
+		margin: 0 auto 1em;
+	}
+
+	h3 {
+		text-align: center;
+		margin: 1em auto 0;
+	}
+
+	a {
+		color: var(--amarelo);
+	}
+
+	a:hover {
+		color: var(--ciano);
+	}
+
+	.product-gallery {
+		display: grid;
+		gap: 8px;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+
+	.product-gallery .product-image {
+        text-align: center;
+        margin: auto 1em;
+	}
+</style>
