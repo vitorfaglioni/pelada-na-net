@@ -4,7 +4,6 @@ const { name, amount, description, isReward, oldAmount } = Astro.props;
 <h4>{name}!</h4>
 {isReward && <p><strong>A partir de:</strong></p>}
 <h1>R$ {amount},00</h1>
-{ oldAmount != amount && <strike><h5>R$ {oldAmount},00</h5></strike> }
 <p>{description}</p>
 
 <p><br/></p>
