@@ -1,6 +1,7 @@
 ---
 import { SITE_TITLE } from '../consts';
 const playlistURL = 'https://omny.fm/shows/pelada-na-net/playlists/podcast/embed?style=artwork' + SITE_TITLE
+const apocryphesUrl = 'https://drive.google.com/drive/folders/1jwwPQ9JdTUyVoTufedILt8VCxzYwYvjp?usp=sharing'
 ---
 
 <div id="Listen">
@@ -69,9 +70,24 @@ const playlistURL = 'https://omny.fm/shows/pelada-na-net/playlists/podcast/embed
 				</svg>
 			</a>
 		</div>
+		</br>
+		<h2>Temos alguns episódios antigos que não estão disponíveis no feed.</h2>
+		<div class="social-links">
+			<a href={apocryphesUrl} target="_blank">
+				<span class="sr-only">Episódios apócrifos</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+					<path fill="currentColor" d="M6.5 20q-2.275 0-3.887-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.575-2.025 2.138-3.4T11 4.075v8.075l-.9-.875Q9.825 11 9.413 11t-.713.3q-.275.275-.275.7t.275.7l2.6 2.6q.3.3.7.3t.7-.3l2.6-2.6q.275-.275.287-.687T15.3 11.3q-.275-.275-.687-.288t-.713.263l-.9.875V4.075q2.575.35 4.288 2.313T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.312 3.188T18.5 20z"/>
+				</svg>
+			</a>
+		</div>
+		<p>Clique no ícone acima e acesse nosso acervo de episódios apócrifos!</p>
 	</main>
 </div>
 <style>
+	p {
+		color: var(--azul-escuro);
+	}
+
 	div {
 		background-color: var(--amarelo);
 	}
