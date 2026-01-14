@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Viewers Twitch</title>
 </head>
 
 <body style="
@@ -13,34 +12,32 @@
   color: white;
 ">
 
-  <div id="viewers">offline</div>
+<div id="viewers">offline</div>
 
-  <script>
-    function atualizarViewers() {
-      const viewersEl = document.getElementById("viewers");
+<script>
+  function atualizarViewers() {
+    const el = document.getElementById("viewers");
+    if (!el) return;
 
-      if (!viewersEl) return;
+    fetch("https://api.ivr.fi/v2/twitch/user?login=jovemnerd")
+      .then(r => r.json())
+      .then(data => {
+        if (data.stream && typeof data.stream.viewersCount === "number") {
+          el.innerText = data.stream.viewersCount + " viewers";
+        } else {
+          el.innerText = "offline";
+        }
+      })
+      .catch(() => {
+        el.innerText = "offline";
+      });
+  }
 
-      fetch("https://api.twitchmetrics.net/c/channel/jovemnerd")
-        .then(response => response.json())
-        .then(data => {
-          if (data.stream && typeof data.stream.viewers === "number") {
-            viewersEl.innerText = data.stream.viewers + " viewers";
-          } else {
-            viewersEl.innerText = "offline";
-          }
-        })
-        .catch(() => {
-          viewersEl.innerText = "offline";
-        });
-    }
-
-    // garante que o DOM já existe
-    document.addEventListener("DOMContentLoaded", () => {
-      atualizarViewers();
-      setInterval(atualizarViewers, 30000); // atualiza a cada 30s
-    });
-  </script>
+  document.addEventListener("DOMContentLoaded", () => {
+    atualizarViewers();
+    setInterval(atualizarViewers, 30000);
+  });
+</script>
 
 </body>
 </html>
