@@ -1,0 +1,153 @@
+---
+const recordingLine = [
+  "COACH CAÊ",
+  "DANIEL DE ANDREA ROMA",
+  "Odair Braz Júnior",
+  "Rodrigo Sarmento",
+  "Lucas Aquino do Prado",
+  "Bruno Vieira Silva",
+  "Isabella de Oliveira Gonzaga Morassi",
+  "RICARDO LOMBA DE ARAUJO JUNIOR",
+  "ITALO LEANDRO FREIRE DE ALBUQUERQUE",
+  "Lucas Ladeira",
+  "JOSE REIS NETO",
+  "JOAO PAULO OLIVEIRA COSTA",
+  "Higor Pêgas Rosa de Faria",
+  "LEANDRO CUNHA DINIZ BRAS",
+  "Gabriel Lecomte Pinho e Souza",
+  "Albert José de Souza",
+  "Pedro Lauria",
+  "MARCUS VINICIUS DE FREITAS",
+  "Isabelle Zacara",
+  "Elvis Bezerra Viana",
+  "BRUNO BURKART",
+  "Caio Arantes Bizzo de Almeida",
+  "WILLIAM PINHEIRO DOS SANTOS",
+  "Felipe Cavallaro Trindade",
+  "Victor Raimundi Brandao Alberto de Mello",
+  "ALEXANDRE CAIEIRO DA COSTA",
+  "JULIANA ROSSA NUNES",
+  "VINICIUS COSTA AFFONSO",
+  "VINICIUS MARCONATO CATALDI",
+  "WILLIAN TALON PEREIRA",
+  "RENAN DOS SANTOS DE OLIVEIRA",
+  "Kim Pedro Goncalves",
+  "ENGELS MARX DINIZ NEVES",
+  "MAURICIO ADAMS",
+  "Fabricio da Silva Hoepers",
+  "Joao Victor Sales Souza",
+  "RAONI DINIZ NEVES",
+  "FABIANO LUIZ BORBA",
+  "DOUGLAS CORDEIRO ALENCAR SILVA",
+  "VINICIUS ATHANASOPOULOS",
+  "RODRIGO PEREIRA MORAES",
+  "Douglas Rodrigues Pinto Neto"
+];
+
+const formatName = (name: string) => {
+  return name
+    .toLowerCase()
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
+---
+
+<div id="RecordingLine">
+	<main>
+		<h1>Fila de gravação!</h1>
+		
+		<br/>
+
+		<h4>Colaboradores das categorias Força Gabuzinho de Cris Cris ordenados a serem convidados para as próximas gravações.</h4>
+		
+		<br/>
+
+		<ul>
+			{recordingLine.map((name, index) => (
+			<li>
+				<span class="lineIndex">{index + 1}</span>
+				<span class="lineName">{formatName(name)}</span>
+			</li>
+			))}
+		</ul>
+
+		<br/>
+
+		<h4>Muito obrigado mais uma vez pela força que deram pra mim e pro meu cachorro. Vocês são incríveis.</h4>
+	</main>
+</div>
+
+<style>
+	div {
+		background-color: var(--azul-medio);
+	}
+
+	main {
+		padding: 3em auto;
+	}
+
+	ul {
+		text-align: center;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.lineIndex {
+		font-weight: bolder;
+		color: var(--ciano);
+	}
+
+	.lineName {
+		color: var(--branco);
+	}
+
+	h1 {
+		text-align: center;
+		color: var(--amarelo);
+		margin: auto;
+	}
+
+	h4 {
+		text-align: center;
+		color: var(--branco);
+		margin: 0 auto;
+	}
+
+	p {
+		text-align: center;
+		color: var(--branco);
+		margin: 1em auto 0;
+	}
+
+	.icons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1em;
+		margin: 0 auto;
+	}
+
+	.icons a {
+		text-decoration: none;
+		color: var(--amarelo);
+	}
+
+	.icons a:hover {
+		color: var(--ciano);
+	}
+
+	blockquote {
+		color: var(--amarelo);
+		border-left: 4px solid var(--branco);
+	}
+	
+	a {
+		color: var(--amarelo);
+	}
+
+	a:hover {
+		color: var(--ciano);
+	}
+</style>
